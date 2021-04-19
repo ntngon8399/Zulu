@@ -12,6 +12,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     background-color: white;
+    color: $gray-dark;
 }
 
 img{
@@ -62,4 +63,57 @@ a{
     max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.block{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 85px;
+
+    &__caption{
+        color: $gray-blur;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    &__caption:before{
+        left: 0;
+        transform: translateX(-100%);  
+    }     
+    &__caption:after{
+        right: 0;
+        transform: translateX(100%);  
+    }       
+    &__caption:before,
+    &__caption:after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $primary-color;
+        top: 50%;
+          
+    }
+    &__heading{
+        font-size: 50px;
+        line-height: 1.4;
+        & > span{
+            display: block;
+        }
+    }
+}
+
+.text-clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &--2{
+        -webkit-line-clamp: 2;
+    }
 }
