@@ -31,10 +31,22 @@ a {
   cursor: pointer;
   background-color: transparent;
   line-height: normal;
+  transition: color 0.5s ease-in-out;
+}
+.button:hover {
+  color: #579aff;
 }
 .button--primary {
   color: white;
   background-color: #579aff;
+}
+.button--primary:hover {
+  color: white;
+  background-color: #81aef2;
+}
+.button--outline {
+  color: #a5b2c3;
+  border: 1px solid;
 }
 
 .wrapper {
@@ -74,6 +86,46 @@ a {
 }
 .header__auth {
   margin-left: auto;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+}
+.banner__info {
+  width: 35%;
+}
+.banner__image {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 65%;
+  transform: scaleX(50px);
+}
+.banner__heading {
+  font-size: 55px;
+  line-height: 1.4;
+  color: #272e35;
+  margin-bottom: 40px;
+}
+.banner__heading span {
+  display: block;
+}
+.banner__desc {
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.banner__links {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.banner__links .button:first-child {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
